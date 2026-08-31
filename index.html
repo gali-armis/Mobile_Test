@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Mock</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="phone">
+    <div class="topbar">
+      <button id="back-button" class="back-button hidden">&larr; Back</button>
+      <h1 id="title">Items</h1>
+    </div>
+    <div id="refreshed-at" class="refreshed-at"></div>
+
+    <div id="list-screen">
+      <ul id="list" class="list"></ul>
+    </div>
+
+    <div id="detail-screen" class="detail hidden">
+      <div id="detail"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
