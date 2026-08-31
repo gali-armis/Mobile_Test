@@ -1,0 +1,40 @@
+{
+  "alerts": [
+    {
+      "id": "1",
+      "device": "Finance-Laptop-042",
+      "risk": "Critical",
+      "summary": "Unusual outbound connection to unrecognized external IP",
+      "description": "This device has established repeated outbound connections to an IP address not seen in its historical baseline. The AI recommends isolating the device from the network pending review.",
+      "recommendedAction": "Isolate device from network",
+      "timestamp": "2026-08-31T08:12:00Z"
+    },
+    {
+      "id": "2",
+      "device": "HVAC-Controller-17",
+      "risk": "High",
+      "summary": "Firmware version has a known unpatched vulnerability",
+      "description": "The device is running firmware with a publicly disclosed vulnerability. The AI recommends scheduling a firmware update during the next maintenance window.",
+      "recommendedAction": "Schedule firmware update",
+      "timestamp": "2026-08-31T07:40:00Z"
+    },
+    {
+      "id": "3",
+      "device": "Badge-Reader-Lobby-3",
+      "risk": "Medium",
+      "summary": "Repeated failed authentication attempts",
+      "description": "This device logged an unusually high number of failed authentication attempts in the last hour. The AI recommends a temporary access review.",
+      "recommendedAction": "Flag for access review",
+      "timestamp": "2026-08-31T06:55:00Z"
+    },
+    {
+      "id": "4",
+      "device": "Printer-Marketing-02",
+      "risk": "Low",
+      "summary": "Device reappeared on network after 30 days offline",
+      "description": "This device was previously marked stale and has reconnected to the network. The AI recommends confirming it's still an authorized asset.",
+      "recommendedAction": "Confirm asset ownership",
+      "timestamp": "2026-08-30T22:10:00Z"
+    }
+  ]
+}
