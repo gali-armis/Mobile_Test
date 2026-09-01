@@ -1,4 +1,5 @@
 import datetime
+import hashlib
 import json
 import os
 import sys
@@ -82,6 +83,17 @@ def first_present(item, *keys, default=""):
     return default
 
 
+def stable_id(item, *id_keys, fallback_keys):
+    found = first_present(item, *id_keys)
+    if found:
+        return str(found)
+    # The API has occasionally omitted the id field for a given item - fall
+    # back to a stable hash of other fields so routing/drill-down never
+    # silently breaks on an empty id.
+    basis = "|".join(str(item.get(k, "")) for k in fallback_keys)
+    return hashlib.md5(basis.encode()).hexdigest()[:12]
+
+
 def main():
     secret_key = os.environ["CONSOLE_API_KEY"]
 
@@ -93,7 +105,7 @@ def main():
 
     alerts = [
         {
-            "id": str(item.get("alertId", "")),
+            "id": stable_id(item, "alertId", "id", fallback_keys=["title", "time", "classification"]),
             "severity": item.get("severity", ""),
             "time": item.get("time", ""),
             "title": item.get("title", ""),
@@ -106,7 +118,7 @@ def main():
 
     activities = [
         {
-            "id": str(item.get("activityUUID") or item.get("id") or ""),
+            "id": stable_id(item, "activityUUID", "id", fallback_keys=["title", "time", "sourceIp"]),
             "title": item.get("title", ""),
             "content": item.get("content", ""),
             "type": item.get("type", ""),
@@ -128,7 +140,7 @@ def main():
 
     policies = [
         {
-            "id": str(first_present(item, "policyId", "id", "ruleId")),
+            "id": stable_id(item, "policyId", "id", "ruleId", fallback_keys=["name", "title", "policyName"]),
             "name": first_present(item, "name", "title", "policyName", "ruleName", default="Untitled policy"),
             "description": first_present(item, "description", "content"),
         }
