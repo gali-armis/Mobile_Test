@@ -11,7 +11,7 @@ BASE_URL = "https://rc-v.armis.com"
 DEVICE_FILTER = 'device:(category:Automations,"Manufacturing Equipment")'
 
 ALERTS_AQL = f'in:alerts status:Open timeFrame:"7 Days" severity:High,Critical {DEVICE_FILTER}'
-ALERTS_FIELDS = "alerts:alertId,severity,time,title,classification,type,policyLabels"
+ALERTS_FIELDS = "alerts:alertId,severity,time,title,classification,type,description,policyId,policyTitle"
 
 ACTIVITIES_AQL = f'in:activity timeFrame:"7 Days" {DEVICE_FILTER}'
 ACTIVITIES_FIELDS = "activity:title,content,type,protocol,time,sourceIp,destinationIp,site"
@@ -111,7 +111,9 @@ def main():
             "title": item.get("title", ""),
             "classification": item.get("classification", ""),
             "type": item.get("type", ""),
-            "policyLabels": item.get("policyLabels", []),
+            "description": item.get("description", ""),
+            "policyId": str(item.get("policyId", "")),
+            "policyTitle": item.get("policyTitle", ""),
         }
         for item in search(access_token, ALERTS_AQL, ALERTS_FIELDS)
     ]

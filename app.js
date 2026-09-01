@@ -27,13 +27,13 @@ function setFollowedPolicies(names) {
   localStorage.setItem(FOLLOWED_POLICIES_KEY, JSON.stringify(names));
 }
 
-function togglePolicyFollow(name) {
+function togglePolicyFollow(policyId) {
   const followed = getFollowedPolicies();
-  const idx = followed.indexOf(name);
+  const idx = followed.indexOf(policyId);
   if (idx >= 0) {
     followed.splice(idx, 1);
   } else {
-    followed.push(name);
+    followed.push(policyId);
   }
   setFollowedPolicies(followed);
 }
@@ -45,11 +45,6 @@ function severityBadge(severity) {
 function formatTime(t) {
   const d = /^\d+$/.test(String(t)) ? new Date(Number(t)) : new Date(t);
   return isNaN(d) ? "" : d.toLocaleString();
-}
-
-function policyLabelTags(labels) {
-  if (!labels || !labels.length) return "";
-  return `<div class="tags">${labels.map((l) => `<span class="tag">${l}</span>`).join("")}</div>`;
 }
 
 function showScreen(id) {
@@ -100,7 +95,7 @@ function renderAlertsList() {
     li.innerHTML = `
       ${severityBadge(alert.severity)}
       <div class="device">${alert.title}</div>
-      <div class="summary">${alert.classification}${alert.type ? " · " + alert.type : ""}</div>
+      <div class="summary">${alert.policyTitle || alert.classification}${alert.type ? " · " + alert.type : ""}</div>
     `;
     li.addEventListener("click", () => {
       location.hash = `#/item/${alert.id}`;
@@ -122,9 +117,10 @@ function renderAlertDetail(id) {
   document.getElementById("alert-detail").innerHTML = `
     ${severityBadge(alert.severity)}
     <div class="meta">${formatTime(alert.time)}</div>
-    <p>${alert.title}</p>
-    <div class="recommended-action">${alert.classification || "Uncategorized"}${alert.type ? " · " + alert.type : ""}</div>
-    ${policyLabelTags(alert.policyLabels)}
+    <p>${alert.description || alert.title}</p>
+    <div class="recommended-action">
+      ${alert.policyTitle ? "Policy: " + alert.policyTitle : (alert.classification || "Uncategorized")}${alert.type ? " · " + alert.type : ""}
+    </div>
     <div class="actions">
       <button class="approve">Approve</button>
       <button class="reject">Reject</button>
@@ -199,9 +195,7 @@ function renderNotifications() {
     return;
   }
 
-  const triggered = alerts.filter((a) =>
-    (a.policyLabels || []).some((label) => followed.includes(label))
-  );
+  const triggered = alerts.filter((a) => followed.includes(a.policyId));
 
   if (!triggered.length) {
     emptyState.classList.remove("hidden");
@@ -219,7 +213,7 @@ function renderNotifications() {
     li.innerHTML = `
       ${severityBadge(alert.severity)}
       <div class="device">${alert.title}</div>
-      <div class="summary">Matched policy label: ${(alert.policyLabels || []).filter((l) => followed.includes(l)).join(", ")}</div>
+      <div class="summary">Matched policy: ${alert.policyTitle || alert.policyId}</div>
     `;
     li.addEventListener("click", () => {
       location.hash = `#/item/${alert.id}`;
@@ -236,7 +230,7 @@ function renderPolicies() {
   const list = document.getElementById("policies-list");
   list.innerHTML = "";
   for (const policy of policies) {
-    const isFollowing = followed.includes(policy.name);
+    const isFollowing = followed.includes(policy.id);
     const li = document.createElement("li");
     li.innerHTML = `
       <div class="device">${policy.name}</div>
@@ -245,7 +239,7 @@ function renderPolicies() {
     `;
     li.querySelector(".follow-button").addEventListener("click", (e) => {
       e.stopPropagation();
-      togglePolicyFollow(policy.name);
+      togglePolicyFollow(policy.id);
       renderPolicies();
     });
     list.appendChild(li);
