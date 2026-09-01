@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01T14:08:29.997222Z",
+  "updatedAt": "2026-09-01T14:10:57.757763Z",
   "alerts": [
     {
       "id": "bf7f595ad999",
@@ -1174,29 +1174,254 @@
   ],
   "policies": [
     {
-      "id": "count",
-      "name": "count",
+      "id": "15645",
+      "name": "RF 245",
       "description": ""
     },
     {
-      "id": "next",
-      "name": "next",
+      "id": "15123",
+      "name": "Device offline",
       "description": ""
     },
     {
-      "id": "policies",
-      "name": "policies",
+      "id": "15327",
+      "name": "online policy on IP Connection",
       "description": ""
     },
     {
-      "id": "prev",
-      "name": "prev",
+      "id": "13655",
+      "name": "IP Connection offline",
       "description": ""
     },
     {
-      "id": "total",
-      "name": "total",
+      "id": "14744",
+      "name": "Activity online - ilan",
+      "description": "A differant description to see"
+    },
+    {
+      "id": "15607",
+      "name": "ip-fran",
       "description": ""
+    },
+    {
+      "id": "15605",
+      "name": "test",
+      "description": ""
+    },
+    {
+      "id": "13298",
+      "name": "Connection for automation",
+      "description": "Description for policies (not default)"
+    },
+    {
+      "id": "15597",
+      "name": "test-bug-list",
+      "description": ""
+    },
+    {
+      "id": "15583",
+      "name": "Francis type:\"Device Name Associated\",\"Device Name Changed\"",
+      "description": "fewfwe"
+    },
+    {
+      "id": "13785",
+      "name": "Connection to PLC device on HTTP/Telnet ports - test2",
+      "description": "Mitre Tactic: Initial Access, Lateral Movement, Mitre Technique: Remote Services. This policy detects PLC devices responding on HTTP or Telnet ports."
+    },
+    {
+      "id": "15546",
+      "name": "Devices running EOL OS-Mock Mobile",
+      "description": "This policy identifies operating systems deemed EOL (End of Life) by the manufacturer. The EOL for software means that the software has reached the end of its predefined support period and will be retired. Beyond this date, the software will no longer receive feature enhancements, maintenance, or security updates"
+    },
+    {
+      "id": "15545",
+      "name": "My Policy yulia",
+      "description": ""
+    },
+    {
+      "id": "14101",
+      "name": "Custom_property",
+      "description": ""
+    },
+    {
+      "id": "15541",
+      "name": "sensor - Google Cloud Platform (Test gcp) - 242",
+      "description": ""
+    },
+    {
+      "id": "15409",
+      "name": "Devices that start with a",
+      "description": ""
+    },
+    {
+      "id": "15517",
+      "name": "My Policy sef",
+      "description": ""
+    },
+    {
+      "id": "15498",
+      "name": "Established Connection Using Weak TLS Cipher Suite",
+      "description": "This policy detects active sessions communicating over weak, deprecated cipher suites. Services allowing these established connections should be audited and transitioned to secure, recommended alternatives to enforce modern cryptographic standards."
+    },
+    {
+      "id": "15497",
+      "name": "Attempted Connection Using Weak TLS Cipher Suite",
+      "description": "This policy detects connection requests attempting to negotiate weak cipher suites that rely on deprecated cryptographic algorithms. While these suites still provide basic encryption, they lack modern security standards and their usage should be monitored for phase-out."
+    },
+    {
+      "id": "15496",
+      "name": "Suspicious TLS communication",
+      "description": "This policy monitors network traffic to detect and alert on instances of protocol tunneling hidden within unexpected or anomalous Transport Layer Security (TLS) connections.\nIt specifically identifies situations where unauthorized protocols or restricted data streams are being encapsulated and smuggled inside seemingly legitimate, encrypted TLS sessions to bypass standard firewall controls or security boundaries."
+    },
+    {
+      "id": "15495",
+      "name": "Connection to PLC device on HTTP/Telnet ports - test2 - ilan",
+      "description": "Mitre Tactic: Initial Access, Lateral Movement, Mitre Technique: Remote Services. This policy detects PLC devices responding on HTTP or Telnet ports."
+    },
+    {
+      "id": "15466",
+      "name": "Ignore Debug",
+      "description": ""
+    },
+    {
+      "id": "14958",
+      "name": "sensor - Google Cloud Platform (Test gcp)",
+      "description": ""
+    },
+    {
+      "id": "15413",
+      "name": "Established Connection Using Insecure TLS Cipher Suite",
+      "description": "This policy detects active, successfully established connections utilizing insecure cipher suites. Because these sessions are exposed to interception and compromise, they should be terminated and the underlying service misconfigurations resolved."
+    },
+    {
+      "id": "15412",
+      "name": "Attempted Connection Using Insecure TLS Cipher Suite",
+      "description": "This policy detects handshake requests attempting to negotiate insecure cipher suites that provide no meaningful cryptographic protection. These attempts expose communications to interception and should be blocked."
+    },
+    {
+      "id": "15389",
+      "name": "data.microsoft.com activity match",
+      "description": ""
+    },
+    {
+      "id": "12794",
+      "name": "Connection to PLC device on HTTP/Telnet ports",
+      "description": "Mitre Tactic: Initial Access, Lateral Movement, Mitre Technique: Remote Services. This policy detects PLC devices responding on HTTP or Telnet ports."
+    },
+    {
+      "id": "15331",
+      "name": "Log4j exploit attempt detected - dlambert Test",
+      "description": "The policy detects any activity identified as a Log4j exploit attempt"
+    },
+    {
+      "id": "15330",
+      "name": "[Risk] SMBv1 traffic detected",
+      "description": "[Risk] SMBv1 traffic detected"
+    },
+    {
+      "id": "15329",
+      "name": "CrowdStrike Agents with Disabled modules",
+      "description": "CrowdStrike Agents with Disabled Device Control, Uninstall Protection or Remote Response."
+    },
+    {
+      "id": "15128",
+      "name": "My Policy test",
+      "description": ""
+    },
+    {
+      "id": "15278",
+      "name": "Asher AVM Rating Test 1",
+      "description": ""
+    },
+    {
+      "id": "15037",
+      "name": "amir test policy",
+      "description": ""
+    },
+    {
+      "id": "15156",
+      "name": "Asher Critical",
+      "description": ""
+    },
+    {
+      "id": "15078",
+      "name": "Availability Monitoring - Critical Medical Device Offline - Copy (2)",
+      "description": "[Operation] Critical Medical Device Offline"
+    },
+    {
+      "id": "15076",
+      "name": "Availability Monitoring - Critical Medical Device Offline - Copy (1)",
+      "description": "[Operation] Critical Medical Device Offline"
+    },
+    {
+      "id": "15038",
+      "name": "siem site testing",
+      "description": ""
+    },
+    {
+      "id": "15031",
+      "name": "gai-policy-test",
+      "description": "gai's test to check adorgunit works with policy engine"
+    },
+    {
+      "id": "14963",
+      "name": "AD Devices with multiple failed login attempt errors - Copy (1)",
+      "description": "AD Devices with multiple bad password attempts."
+    },
+    {
+      "id": "14962",
+      "name": "Disabled Devices in AD that join to a corporate network - Copy (1)",
+      "description": "Disabled Devices in AD that join to a corporate network."
+    },
+    {
+      "id": "14961",
+      "name": "AD Devices with multiple failed login attempt errors",
+      "description": "AD Devices with multiple bad password attempts."
+    },
+    {
+      "id": "14960",
+      "name": "Disabled Devices in AD that join to a corporate network",
+      "description": "Disabled Devices in AD that join to a corporate network."
+    },
+    {
+      "id": "14789",
+      "name": "Availability Monitoring - Critical Medical Device IP Collisions Detected - Copy (17)",
+      "description": "[Operation] Critical Medical Device with Multiple IP Collisions"
+    },
+    {
+      "id": "14704",
+      "name": "AsherTestUvm3",
+      "description": ""
+    },
+    {
+      "id": "14577",
+      "name": "Detect lateral movement",
+      "description": "In most environments, LLMNR traffic is sent to a broadcast/multicast address beginning ff02, This policy looks for devices responding to LLMNR which would be the next logical phase for an attacker to abuse LLMNR. If following an investigation the activity is legitimate, the device IDs of the Endpoints should be negated from the policy to avoid further alerts"
+    },
+    {
+      "id": "14586",
+      "name": "ilan - test epss lower then",
+      "description": ""
+    },
+    {
+      "id": "14432",
+      "name": "Availability Monitoring - Critical Medical Device IP Collisions Detected",
+      "description": "[Operation] Critical Medical Device with Multiple IP Collisions"
+    },
+    {
+      "id": "14431",
+      "name": "IPConnection Offline Test Asher",
+      "description": ""
+    },
+    {
+      "id": "13190",
+      "name": "ilan pano",
+      "description": ""
+    },
+    {
+      "id": "13986",
+      "name": "Device communication to external host",
+      "description": "The policy detects any type of communication from the network to external hosts."
     }
   ]
 }
