@@ -1,11 +1,11 @@
-const CACHE_NAME = "armis-mobile-proto-v4";
+const CACHE_NAME = "armis-mobile-proto-v5";
+const LIVE_DATA_FILE = "mockdata.json";
 const APP_SHELL = [
   "./",
   "index.html",
   "styles.css",
   "app.js",
   "manifest.json",
-  "mockdata.json",
   "icons/icon-192.png",
   "icons/icon-512.png",
 ];
@@ -28,6 +28,21 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
+  if (event.request.url.endsWith(LIVE_DATA_FILE)) {
+    // Always go to the network for live alert data; only fall back to the
+    // last-known copy if the device is offline.
+    event.respondWith(
+      fetch(event.request)
+        .then((res) => {
+          const copy = res.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+          return res;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request).then((cached) => cached || fetch(event.request))
   );
