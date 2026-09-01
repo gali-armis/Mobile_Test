@@ -1,3 +1,6 @@
+const PASSCODE = "Aa12345!";
+const GATE_KEY = "armis-proto-unlocked";
+
 let alerts = [];
 
 const INCOMING_ALERTS = [
@@ -144,8 +147,33 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-loadData();
+function unlockApp() {
+  document.getElementById("gate").classList.add("hidden");
+  document.getElementById("app").classList.remove("hidden");
+  loadData();
+  // Auto-fire one simulated push partway through a session, so it shows up
+  // naturally during a moderated usability test rather than only on demand.
+  setTimeout(simulateNewAlert, 25000);
+}
 
-// Auto-fire one simulated push partway through a session, so it shows up
-// naturally during a moderated usability test rather than only on demand.
-setTimeout(simulateNewAlert, 25000);
+function checkGate() {
+  if (localStorage.getItem(GATE_KEY) === "true") {
+    unlockApp();
+    return;
+  }
+
+  document.getElementById("gate-submit").addEventListener("click", () => {
+    const value = document.getElementById("gate-input").value;
+    if (value === PASSCODE) {
+      localStorage.setItem(GATE_KEY, "true");
+      unlockApp();
+    } else {
+      document.getElementById("gate-error").classList.remove("hidden");
+    }
+  });
+  document.getElementById("gate-input").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") document.getElementById("gate-submit").click();
+  });
+}
+
+checkGate();

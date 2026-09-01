@@ -15,7 +15,16 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="phone">
+  <div id="gate" class="gate">
+    <div class="gate-box">
+      <h2>Enter passcode</h2>
+      <input id="gate-input" type="password" inputmode="text" autocomplete="off" />
+      <button id="gate-submit">Continue</button>
+      <div id="gate-error" class="gate-error hidden">Incorrect passcode</div>
+    </div>
+  </div>
+
+  <div id="app" class="phone hidden">
     <div class="topbar">
       <button id="back-button" class="back-button hidden">&larr; Back</button>
       <h1 id="title">Alerts</h1>
