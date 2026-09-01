@@ -111,15 +111,21 @@ def main():
         for item in search(access_token, ACTIVITIES_AQL, ACTIVITIES_FIELDS)
     ]
 
-    # Policies fields aren't confirmed against docs yet - map defensively from
-    # whatever the API actually returns rather than assuming a fixed schema.
+    # Policies fields aren't confirmed against docs yet, and "in:policies" may
+    # not even be the right entity for the generic search endpoint - don't let
+    # a failure here block alerts/activities from refreshing.
+    try:
+        policy_items = search(access_token, POLICIES_AQL)
+    except urllib.error.HTTPError:
+        policy_items = []
+
     policies = [
         {
             "id": str(first_present(item, "policyId", "id", "ruleId")),
             "name": first_present(item, "name", "title", "policyName", "ruleName", default="Untitled policy"),
             "description": first_present(item, "description", "content"),
         }
-        for item in search(access_token, POLICIES_AQL)
+        for item in policy_items
     ]
 
     out = {
