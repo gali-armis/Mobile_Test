@@ -59,9 +59,9 @@ def search(access_token, aql, fields=None):
         params["fields"] = fields
     query = urllib.parse.urlencode(params)
     resp = get(f"{BASE_URL}/api/v1/search/?{query}", {"Authorization": access_token})
-    results = unwrap(resp, ["data", "results"], ["data"], ["results"])
-    if results is None:
-        print(f"Could not find results for aql={aql!r}, response keys: {list(resp.keys())}", file=sys.stderr)
+    results = unwrap(resp, ["data", "results"], ["results"])
+    if not isinstance(results, list):
+        print(f"Could not find results list for aql={aql!r}, response keys: {list(resp.keys())}", file=sys.stderr)
         return []
     return results
 
@@ -69,8 +69,8 @@ def search(access_token, aql, fields=None):
 def list_policies(access_token):
     query = urllib.parse.urlencode({"from": 1, "length": LENGTH})
     resp = get(f"{BASE_URL}/api/v1/policies/?{query}", {"Authorization": access_token})
-    results = unwrap(resp, ["data", "results"], ["data"], ["results"])
-    if results is None:
+    results = unwrap(resp, ["data", "policies"], ["data", "results"], ["policies"], ["results"])
+    if not isinstance(results, list):
         print(f"Could not find policies results, response keys: {list(resp.keys())}", file=sys.stderr)
         return []
     return results
