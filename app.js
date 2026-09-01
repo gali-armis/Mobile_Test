@@ -1,44 +1,41 @@
 const PASSCODE = "Aa12345!";
 const GATE_KEY = "armis-proto-unlocked";
+const FOLLOWED_POLICIES_KEY = "armis-proto-followed-policies";
 
 let alerts = [];
-
-const INCOMING_ALERTS = [
-  {
-    id: "sim-1",
-    severity: "Critical",
-    title: "New device enrolled outside business hours",
-    classification: "Security - Risk",
-    type: "Unauthorized Access",
-    policyLabels: ["general"],
-  },
-  {
-    id: "sim-2",
-    severity: "High",
-    title: "Device sending data to a newly-seen destination",
-    classification: "Security - Other",
-    type: "Suspicious Activity",
-    policyLabels: ["Threat"],
-  },
-];
-let simIndex = 0;
+let activities = [];
+let policies = [];
 
 async function loadData() {
-  const res = await fetch("mockdata.json", { cache: "no-store" });
+  const res = await fetch("data.json", { cache: "no-store" });
   const data = await res.json();
-  alerts = data.alerts;
+  alerts = data.alerts || [];
+  activities = data.activities || [];
+  policies = data.policies || [];
   render();
 }
 
-function render() {
-  const route = location.hash.slice(2); // strip "#/"
-  const [view, id] = route.split("/");
-
-  if (view === "item" && id) {
-    renderDetail(id);
-  } else {
-    renderList();
+function getFollowedPolicies() {
+  try {
+    return JSON.parse(localStorage.getItem(FOLLOWED_POLICIES_KEY) || "[]");
+  } catch {
+    return [];
   }
+}
+
+function setFollowedPolicies(names) {
+  localStorage.setItem(FOLLOWED_POLICIES_KEY, JSON.stringify(names));
+}
+
+function togglePolicyFollow(name) {
+  const followed = getFollowedPolicies();
+  const idx = followed.indexOf(name);
+  if (idx >= 0) {
+    followed.splice(idx, 1);
+  } else {
+    followed.push(name);
+  }
+  setFollowedPolicies(followed);
 }
 
 function severityBadge(severity) {
@@ -55,13 +52,48 @@ function policyLabelTags(labels) {
   return `<div class="tags">${labels.map((l) => `<span class="tag">${l}</span>`).join("")}</div>`;
 }
 
-function renderList() {
-  document.getElementById("list-screen").classList.remove("hidden");
-  document.getElementById("detail-screen").classList.add("hidden");
-  document.getElementById("title").textContent = "Alerts";
-  document.getElementById("back-button").classList.add("hidden");
+function showScreen(id) {
+  document.querySelectorAll(".screen").forEach((el) => el.classList.add("hidden"));
+  document.getElementById(id).classList.remove("hidden");
+}
 
-  const list = document.getElementById("list");
+function setNavActive(route) {
+  document.querySelectorAll(".nav-button").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.route === route);
+  });
+}
+
+function setHeader(title, showBack) {
+  document.getElementById("title").textContent = title;
+  document.getElementById("back-button").classList.toggle("hidden", !showBack);
+}
+
+function render() {
+  const route = location.hash || "#/home";
+  const parts = route.slice(2).split("/"); // strip "#/"
+  const [section, id] = parts;
+
+  if (section === "item" && id) return renderAlertDetail(id);
+  if (section === "activity" && id) return renderActivityDetail(id);
+  if (section === "policies") return renderPolicies();
+  if (section === "activities") return renderActivitiesList();
+  if (section === "notifications") return renderNotifications();
+  if (section === "alerts") return renderAlertsList();
+  return renderHome();
+}
+
+function renderHome() {
+  setNavActive("#/home");
+  setHeader("Home", false);
+  showScreen("screen-home");
+}
+
+function renderAlertsList() {
+  setNavActive("#/alerts");
+  setHeader("Alerts", false);
+  showScreen("screen-alerts");
+
+  const list = document.getElementById("alerts-list");
   list.innerHTML = "";
   for (const alert of alerts) {
     const li = document.createElement("li");
@@ -77,19 +109,17 @@ function renderList() {
   }
 }
 
-function renderDetail(id) {
+function renderAlertDetail(id) {
   const alert = alerts.find((a) => a.id === id);
   if (!alert) {
-    location.hash = "#/";
+    location.hash = "#/alerts";
     return;
   }
 
-  document.getElementById("list-screen").classList.add("hidden");
-  document.getElementById("detail-screen").classList.remove("hidden");
-  document.getElementById("title").textContent = alert.title;
-  document.getElementById("back-button").classList.remove("hidden");
+  setHeader(alert.title, true);
+  showScreen("screen-alert-detail");
 
-  document.getElementById("detail").innerHTML = `
+  document.getElementById("alert-detail").innerHTML = `
     ${severityBadge(alert.severity)}
     <div class="meta">${formatTime(alert.time)}</div>
     <p>${alert.title}</p>
@@ -114,57 +144,138 @@ function showFeedback(action) {
   el.classList.add("action-feedback");
 }
 
-async function simulateNewAlert() {
-  const template = INCOMING_ALERTS[simIndex % INCOMING_ALERTS.length];
-  simIndex++;
-  const alert = { ...template, time: new Date().toISOString() };
-  alerts = [alert, ...alerts.filter((a) => a.id !== alert.id)];
-  if (!(location.hash.startsWith("#/item"))) {
-    renderList();
+function renderActivitiesList() {
+  setNavActive("#/activities");
+  setHeader("Activities", false);
+  showScreen("screen-activities");
+
+  const list = document.getElementById("activities-list");
+  list.innerHTML = "";
+  for (const activity of activities) {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <div class="device">${activity.title || activity.type || "Activity"}</div>
+      <div class="summary">${formatTime(activity.time)}${activity.site ? " · " + activity.site : ""}</div>
+    `;
+    li.addEventListener("click", () => {
+      location.hash = `#/activity/${activity.id}`;
+    });
+    list.appendChild(li);
   }
-  await notifyAlert(alert);
 }
 
-async function notifyAlert(alert) {
-  if (!("Notification" in window)) return;
-
-  if (Notification.permission === "default") {
-    await Notification.requestPermission();
+function renderActivityDetail(id) {
+  const activity = activities.find((a) => a.id === id);
+  if (!activity) {
+    location.hash = "#/activities";
+    return;
   }
-  if (Notification.permission !== "granted") return;
 
-  const reg = await navigator.serviceWorker.ready;
-  reg.showNotification(`New ${alert.severity} alert`, {
-    body: alert.title,
-    icon: "icons/icon-192.png",
-    data: { id: alert.id },
-  });
+  setHeader(activity.title || "Activity", true);
+  showScreen("screen-activity-detail");
+
+  document.getElementById("activity-detail").innerHTML = `
+    <div class="meta">${formatTime(activity.time)}</div>
+    <p>${activity.content || activity.title || ""}</p>
+    <div class="recommended-action">
+      ${activity.type || ""}${activity.protocol ? " · " + activity.protocol : ""}
+      ${activity.sourceIp ? `<br>${activity.sourceIp} &rarr; ${activity.destinationIp || "?"}` : ""}
+    </div>
+  `;
+}
+
+function renderNotifications() {
+  setNavActive("#/notifications");
+  setHeader("Notifications", false);
+  showScreen("screen-notifications");
+
+  const followed = getFollowedPolicies();
+  const emptyState = document.getElementById("notifications-empty");
+  const list = document.getElementById("notifications-list");
+
+  if (!followed.length) {
+    emptyState.classList.remove("hidden");
+    list.classList.add("hidden");
+    return;
+  }
+
+  const triggered = alerts.filter((a) =>
+    (a.policyLabels || []).some((label) => followed.includes(label))
+  );
+
+  if (!triggered.length) {
+    emptyState.classList.remove("hidden");
+    list.classList.add("hidden");
+    document.querySelector("#notifications-empty p").textContent =
+      "No alerts yet for the policies you follow.";
+    return;
+  }
+
+  emptyState.classList.add("hidden");
+  list.classList.remove("hidden");
+  list.innerHTML = "";
+  for (const alert of triggered) {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      ${severityBadge(alert.severity)}
+      <div class="device">${alert.title}</div>
+      <div class="summary">Matched policy label: ${(alert.policyLabels || []).filter((l) => followed.includes(l)).join(", ")}</div>
+    `;
+    li.addEventListener("click", () => {
+      location.hash = `#/item/${alert.id}`;
+    });
+    list.appendChild(li);
+  }
+}
+
+function renderPolicies() {
+  setHeader("Policies", true);
+  showScreen("screen-policies");
+
+  const followed = getFollowedPolicies();
+  const list = document.getElementById("policies-list");
+  list.innerHTML = "";
+  for (const policy of policies) {
+    const isFollowing = followed.includes(policy.name);
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <div class="device">${policy.name}</div>
+      ${policy.description ? `<div class="summary">${policy.description}</div>` : ""}
+      <button class="follow-button ${isFollowing ? "following" : ""}">${isFollowing ? "Following" : "Follow"}</button>
+    `;
+    li.querySelector(".follow-button").addEventListener("click", (e) => {
+      e.stopPropagation();
+      togglePolicyFollow(policy.name);
+      renderPolicies();
+    });
+    list.appendChild(li);
+  }
 }
 
 document.getElementById("back-button").addEventListener("click", () => {
-  location.hash = "#/";
+  history.back();
 });
 
-document.getElementById("simulate-button").addEventListener("click", simulateNewAlert);
+document.getElementById("browse-policies-button").addEventListener("click", () => {
+  location.hash = "#/policies";
+});
+
+document.querySelectorAll(".nav-button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    location.hash = btn.dataset.route;
+  });
+});
 
 window.addEventListener("hashchange", render);
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("service-worker.js");
-  navigator.serviceWorker.addEventListener("message", (event) => {
-    if (event.data && event.data.type === "navigate") {
-      location.hash = event.data.hash;
-    }
-  });
 }
 
 function unlockApp() {
   document.getElementById("gate").classList.add("hidden");
   document.getElementById("app").classList.remove("hidden");
   loadData();
-  // Auto-fire one simulated push partway through a session, so it shows up
-  // naturally during a moderated usability test rather than only on demand.
-  setTimeout(simulateNewAlert, 25000);
 }
 
 function checkGate() {

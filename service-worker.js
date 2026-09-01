@@ -1,5 +1,5 @@
-const CACHE_NAME = "armis-mobile-proto-v5";
-const LIVE_DATA_FILE = "mockdata.json";
+const CACHE_NAME = "armis-mobile-proto-v6";
+const LIVE_DATA_FILE = "data.json";
 const APP_SHELL = [
   "./",
   "index.html",
@@ -29,7 +29,7 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.url.endsWith(LIVE_DATA_FILE)) {
-    // Always go to the network for live alert data; only fall back to the
+    // Always go to the network for live data; only fall back to the
     // last-known copy if the device is offline.
     event.respondWith(
       fetch(event.request)
@@ -45,22 +45,5 @@ self.addEventListener("fetch", (event) => {
 
   event.respondWith(
     caches.match(event.request).then((cached) => cached || fetch(event.request))
-  );
-});
-
-self.addEventListener("notificationclick", (event) => {
-  const id = event.notification.data && event.notification.data.id;
-  const hash = id ? `#/item/${id}` : "#/";
-  event.notification.close();
-  event.waitUntil(
-    self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((clients) => {
-      for (const client of clients) {
-        if ("focus" in client) {
-          client.postMessage({ type: "navigate", hash });
-          return client.focus();
-        }
-      }
-      return self.clients.openWindow(`./${hash}`);
-    })
   );
 });
