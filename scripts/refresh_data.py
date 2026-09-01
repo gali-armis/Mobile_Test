@@ -15,8 +15,6 @@ ALERTS_FIELDS = "alerts:alertId,severity,time,title,classification,type,policyLa
 ACTIVITIES_AQL = f'in:activity timeFrame:"7 Days" {DEVICE_FILTER}'
 ACTIVITIES_FIELDS = "activity:title,content,type,protocol,time,sourceIp,destinationIp,site"
 
-POLICIES_AQL = "in:policies"
-
 LENGTH = 50
 
 
@@ -67,6 +65,16 @@ def search(access_token, aql, fields=None):
     return results
 
 
+def list_policies(access_token):
+    query = urllib.parse.urlencode({"from": 1, "length": LENGTH})
+    resp = get(f"{BASE_URL}/api/v1/policies/?{query}", {"Authorization": access_token})
+    results = unwrap(resp, ["data", "results"], ["data"], ["results"])
+    if results is None:
+        print(f"Could not find policies results, response keys: {list(resp.keys())}", file=sys.stderr)
+        return []
+    return results
+
+
 def first_present(item, *keys, default=""):
     for key in keys:
         if key in item and item[key] not in (None, ""):
@@ -111,11 +119,10 @@ def main():
         for item in search(access_token, ACTIVITIES_AQL, ACTIVITIES_FIELDS)
     ]
 
-    # Policies fields aren't confirmed against docs yet, and "in:policies" may
-    # not even be the right entity for the generic search endpoint - don't let
-    # a failure here block alerts/activities from refreshing.
+    # Policy object fields aren't confirmed against docs yet - don't let a
+    # failure here block alerts/activities from refreshing.
     try:
-        policy_items = search(access_token, POLICIES_AQL)
+        policy_items = list_policies(access_token)
     except urllib.error.HTTPError:
         policy_items = []
 
