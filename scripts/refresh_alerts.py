@@ -2,6 +2,7 @@ import datetime
 import json
 import os
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -9,17 +10,24 @@ BASE_URL = "https://rc-v.armis.com"
 AQL = 'in:alerts status:Open timeFrame:"7 Days" severity:Medium,High,Critical'
 
 
+def request_json(req):
+    try:
+        with urllib.request.urlopen(req) as resp:
+            return json.loads(resp.read())
+    except urllib.error.HTTPError as e:
+        body = e.read().decode(errors="replace")
+        print(f"HTTP {e.code} calling {req.full_url}: {body}", file=sys.stderr)
+        raise
+
+
 def post_form(url, fields):
     data = urllib.parse.urlencode(fields).encode()
-    req = urllib.request.Request(url, data=data, method="POST")
-    with urllib.request.urlopen(req) as resp:
-        return json.loads(resp.read())
+    headers = {"Content-Type": "application/x-www-form-urlencoded"}
+    return request_json(urllib.request.Request(url, data=data, headers=headers, method="POST"))
 
 
 def get(url, headers):
-    req = urllib.request.Request(url, headers=headers, method="GET")
-    with urllib.request.urlopen(req) as resp:
-        return json.loads(resp.read())
+    return request_json(urllib.request.Request(url, headers=headers, method="GET"))
 
 
 def unwrap(payload, *paths):
