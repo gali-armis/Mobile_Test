@@ -1,4 +1,4 @@
-const CACHE_NAME = "armis-mobile-proto-v3";
+const CACHE_NAME = "armis-mobile-proto-v4";
 const APP_SHELL = [
   "./",
   "index.html",

@@ -6,19 +6,19 @@ let alerts = [];
 const INCOMING_ALERTS = [
   {
     id: "sim-1",
-    device: "VPN-Gateway-East",
-    risk: "Critical",
-    summary: "New device enrolled outside business hours",
-    description: "A new device enrolled on the VPN gateway at 2:47am, outside the org's normal enrollment window. The AI recommends verifying this enrollment with the device owner.",
-    recommendedAction: "Verify enrollment with owner",
+    severity: "Critical",
+    title: "New device enrolled outside business hours",
+    classification: "Security - Risk",
+    type: "Unauthorized Access",
+    policyLabels: ["general"],
   },
   {
     id: "sim-2",
-    device: "Camera-Loading-Dock-4",
-    risk: "High",
-    summary: "Device sending data to a newly-seen destination",
-    description: "This device began sending traffic to a destination it has never contacted before. The AI recommends a closer look before allowing this to continue.",
-    recommendedAction: "Review destination, then decide",
+    severity: "High",
+    title: "Device sending data to a newly-seen destination",
+    classification: "Security - Other",
+    type: "Suspicious Activity",
+    policyLabels: ["Threat"],
   },
 ];
 let simIndex = 0;
@@ -41,8 +41,18 @@ function render() {
   }
 }
 
-function riskBadge(risk) {
-  return `<span class="badge ${risk.toLowerCase()}">${risk}</span>`;
+function severityBadge(severity) {
+  return `<span class="badge ${(severity || "").toLowerCase()}">${severity || "Unknown"}</span>`;
+}
+
+function formatTime(t) {
+  const d = /^\d+$/.test(String(t)) ? new Date(Number(t)) : new Date(t);
+  return isNaN(d) ? "" : d.toLocaleString();
+}
+
+function policyLabelTags(labels) {
+  if (!labels || !labels.length) return "";
+  return `<div class="tags">${labels.map((l) => `<span class="tag">${l}</span>`).join("")}</div>`;
 }
 
 function renderList() {
@@ -56,9 +66,9 @@ function renderList() {
   for (const alert of alerts) {
     const li = document.createElement("li");
     li.innerHTML = `
-      ${riskBadge(alert.risk)}
-      <div class="device">${alert.device}</div>
-      <div class="summary">${alert.summary}</div>
+      ${severityBadge(alert.severity)}
+      <div class="device">${alert.title}</div>
+      <div class="summary">${alert.classification}${alert.type ? " · " + alert.type : ""}</div>
     `;
     li.addEventListener("click", () => {
       location.hash = `#/item/${alert.id}`;
@@ -76,14 +86,15 @@ function renderDetail(id) {
 
   document.getElementById("list-screen").classList.add("hidden");
   document.getElementById("detail-screen").classList.remove("hidden");
-  document.getElementById("title").textContent = alert.device;
+  document.getElementById("title").textContent = alert.title;
   document.getElementById("back-button").classList.remove("hidden");
 
   document.getElementById("detail").innerHTML = `
-    ${riskBadge(alert.risk)}
-    <div class="meta">${new Date(alert.timestamp || Date.now()).toLocaleString()}</div>
-    <p>${alert.description}</p>
-    <div class="recommended-action">AI recommends: <strong>${alert.recommendedAction}</strong></div>
+    ${severityBadge(alert.severity)}
+    <div class="meta">${formatTime(alert.time)}</div>
+    <p>${alert.title}</p>
+    <div class="recommended-action">${alert.classification || "Uncategorized"}${alert.type ? " · " + alert.type : ""}</div>
+    ${policyLabelTags(alert.policyLabels)}
     <div class="actions">
       <button class="approve">Approve</button>
       <button class="reject">Reject</button>
@@ -106,7 +117,7 @@ function showFeedback(action) {
 async function simulateNewAlert() {
   const template = INCOMING_ALERTS[simIndex % INCOMING_ALERTS.length];
   simIndex++;
-  const alert = { ...template, timestamp: new Date().toISOString() };
+  const alert = { ...template, time: new Date().toISOString() };
   alerts = [alert, ...alerts.filter((a) => a.id !== alert.id)];
   if (!(location.hash.startsWith("#/item"))) {
     renderList();
@@ -123,8 +134,8 @@ async function notifyAlert(alert) {
   if (Notification.permission !== "granted") return;
 
   const reg = await navigator.serviceWorker.ready;
-  reg.showNotification(`New ${alert.risk} alert: ${alert.device}`, {
-    body: alert.summary,
+  reg.showNotification(`New ${alert.severity} alert`, {
+    body: alert.title,
     icon: "icons/icon-192.png",
     data: { id: alert.id },
   });

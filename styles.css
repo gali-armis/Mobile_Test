@@ -175,6 +175,21 @@ body {
   color: #333;
 }
 
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.tag {
+  font-size: 11px;
+  background: #f0f0f0;
+  color: #555;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+
 .action-feedback {
   margin-top: 14px;
   padding: 10px;

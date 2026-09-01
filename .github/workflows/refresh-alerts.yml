@@ -1,0 +1,28 @@
+name: Refresh alerts
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch alerts from Armis
+        env:
+          CONSOLE_API_KEY: ${{ secrets.CONSOLE_API_KEY }}
+        run: python3 scripts/refresh_alerts.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add mockdata.json
+          git diff --quiet --cached || git commit -m "Refresh alerts"
+          git push
