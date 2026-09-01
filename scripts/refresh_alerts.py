@@ -7,7 +7,9 @@ import urllib.parse
 import urllib.request
 
 BASE_URL = "https://rc-v.armis.com"
-AQL = 'in:alerts status:Open timeFrame:"7 Days" severity:Medium,High,Critical'
+AQL = 'in:alerts status:Open timeFrame:"7 Days" severity:High,Critical'
+FIELDS = "alerts:alertId,severity,time,title,classification,type,policyLabels"
+LENGTH = 50
 
 
 def request_json(req):
@@ -53,7 +55,7 @@ def main():
         print(f"Could not find access_token, response keys: {list(token_resp.keys())}", file=sys.stderr)
         sys.exit(1)
 
-    query = urllib.parse.urlencode({"aql": AQL})
+    query = urllib.parse.urlencode({"aql": AQL, "fields": FIELDS, "length": LENGTH})
     search_resp = get(f"{BASE_URL}/api/v1/search/?{query}", {"Authorization": access_token})
 
     results = unwrap(search_resp, ["data", "results"], ["data"], ["results"])
