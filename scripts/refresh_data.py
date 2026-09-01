@@ -138,14 +138,16 @@ def main():
     except urllib.error.HTTPError:
         policy_items = []
 
-    policies = [
-        {
+    def to_policy(item):
+        if isinstance(item, str):
+            return {"id": item, "name": item, "description": ""}
+        return {
             "id": stable_id(item, "policyId", "id", "ruleId", fallback_keys=["name", "title", "policyName"]),
             "name": first_present(item, "name", "title", "policyName", "ruleName", default="Untitled policy"),
             "description": first_present(item, "description", "content"),
         }
-        for item in policy_items
-    ]
+
+    policies = [to_policy(item) for item in policy_items]
 
     out = {
         "updatedAt": datetime.datetime.utcnow().isoformat() + "Z",
