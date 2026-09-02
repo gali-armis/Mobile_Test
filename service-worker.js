@@ -1,4 +1,4 @@
-const CACHE_NAME = "armis-mobile-proto-v7";
+const CACHE_NAME = "armis-mobile-proto-v8";
 const LIVE_DATA_FILE = "data.json";
 const APP_SHELL = [
   "./",
