@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T19:34:48.675541Z",
+  "updatedAt": "2026-09-06T21:39:05.891807Z",
   "alerts": [
     {
       "id": "0d2c78a6ee69",
@@ -554,13 +554,27 @@
   ],
   "activities": [
     {
-      "id": "03aec02e21c7",
+      "id": "6046df08e8fb",
+      "title": "",
+      "content": "Resolved IPs: 72.153.5.60",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-09-06T21:37:48+00:00",
+      "sourceIp": "192.168.1.17",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "6046df08e8fb",
       "title": "",
       "content": "Connection Result: Attempt, Version: TLS 1.2",
       "type": "SSL Connection",
       "protocol": "Network",
-      "time": "2026-09-06T19:31:41+00:00",
-      "sourceIp": "192.168.128.8",
+      "time": "2026-09-06T21:37:48+00:00",
+      "sourceIp": "192.168.1.17",
       "destinationIp": null,
       "site": {
         "location": "tlv",
@@ -568,68 +582,12 @@
       }
     },
     {
-      "id": "4545f87c6a97",
+      "id": "66af28c28c01",
       "title": "",
-      "content": "Port: 80, User-Agent: gSOAP/2.8",
-      "type": "HTTP Request",
-      "protocol": "Network",
-      "time": "2026-09-06T19:26:58+00:00",
-      "sourceIp": "192.168.1.43",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "4545f87c6a97",
-      "title": "",
-      "content": "Resolved IPs: 213.221.108.9",
+      "content": "Resolved IPs: 72.153.5.139",
       "type": "DNS Query",
       "protocol": "Network",
-      "time": "2026-09-06T19:26:58+00:00",
-      "sourceIp": "192.168.1.43",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "ebcbbcb01a31",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T19:25:03+00:00",
-      "sourceIp": "192.168.1.199",
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "f7f94367aa77",
-      "title": "",
-      "content": "Resolved IPs: 213.221.108.9",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-09-06T19:24:35+00:00",
-      "sourceIp": "192.168.128.12",
-      "destinationIp": null,
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "1dfe2d957cdb",
-      "title": "",
-      "content": "Resolved IPs: 72.153.5.97",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-09-06T19:21:53+00:00",
+      "time": "2026-09-06T21:32:53+00:00",
       "sourceIp": "192.168.128.21",
       "destinationIp": null,
       "site": {
@@ -638,26 +596,68 @@
       }
     },
     {
-      "id": "ad7f3fd2240c",
+      "id": "bb0fb153eeee",
       "title": "",
-      "content": "Resolved IPs: 172.170.180.133",
-      "type": "DNS Query",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
+      "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-09-06T19:20:18+00:00",
-      "sourceIp": "172.16.4.2",
+      "time": "2026-09-06T21:31:46+00:00",
+      "sourceIp": "192.168.1.199",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "c6313356a3b9",
+      "title": "",
+      "content": "Connection Result: Attempt, Version: TLS 1.2",
+      "type": "SSL Connection",
+      "protocol": "Network",
+      "time": "2026-09-06T21:26:44+00:00",
+      "sourceIp": "192.168.128.12",
       "destinationIp": null,
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "9be00ca15947",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-09-06T21:26:16+00:00",
+      "sourceIp": "192.168.1.199",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "81bce988323e",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-09-06T21:22:15+00:00",
+      "sourceIp": "192.168.128.8",
+      "destinationIp": "239.255.255.250",
       "site": {
         "location": "tlv",
         "name": "Madrid"
       }
     },
     {
-      "id": "d7ed44d1003d",
+      "id": "93dd3d4cc36f",
       "title": "",
       "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
       "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-09-06T19:19:33+00:00",
+      "time": "2026-09-06T21:20:45+00:00",
       "sourceIp": null,
       "destinationIp": "239.255.255.250",
       "site": {
@@ -666,13 +666,27 @@
       }
     },
     {
-      "id": "b9d789e63cb2",
+      "id": "00d496d4bd8b",
+      "title": "",
+      "content": "Resolved IPs: 72.153.5.132",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-09-06T21:17:37+00:00",
+      "sourceIp": "192.168.1.29",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "00d496d4bd8b",
       "title": "",
       "content": "Resolved IPs: 72.153.5.140",
       "type": "DNS Query",
       "protocol": "Network",
-      "time": "2026-09-06T19:18:06+00:00",
-      "sourceIp": "192.168.1.16",
+      "time": "2026-09-06T21:17:37+00:00",
+      "sourceIp": "192.168.1.29",
       "destinationIp": null,
       "site": {
         "location": "tlv",
@@ -680,27 +694,41 @@
       }
     },
     {
-      "id": "b7f1808f5e80",
+      "id": "0a87dbc110bc",
       "title": "",
-      "content": "Resolved IPs: 52.123.245.174, 52.123.245.66, 52.123.245.96, 52.123.244.52, 52.123.240.139, 52.123.243.181, 52.123.242.198, 52.123.245.128",
-      "type": "DNS Query",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
+      "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-09-06T19:16:55+00:00",
-      "sourceIp": "172.16.4.2",
-      "destinationIp": null,
+      "time": "2026-09-06T21:15:14+00:00",
+      "sourceIp": null,
+      "destinationIp": "239.255.255.250",
       "site": {
-        "location": "tlv",
-        "name": "Madrid"
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
       }
     },
     {
-      "id": "7f6e04205ad0",
+      "id": "59a09a78b27a",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-09-06T21:09:44+00:00",
+      "sourceIp": null,
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "22286a04549e",
       "title": "",
       "content": "Connection Result: Attempt, Version: TLS 1.2",
       "type": "SSL Connection",
       "protocol": "Network",
-      "time": "2026-09-06T19:15:56+00:00",
-      "sourceIp": "192.168.1.29",
+      "time": "2026-09-06T21:07:12+00:00",
+      "sourceIp": "192.168.1.16",
       "destinationIp": null,
       "site": {
         "location": "tlv",
@@ -708,12 +736,12 @@
       }
     },
     {
-      "id": "e70c1a2f3291",
+      "id": "5f383ab3ad43",
       "title": "",
       "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
       "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-09-06T19:14:01+00:00",
+      "time": "2026-09-06T21:04:13+00:00",
       "sourceIp": null,
       "destinationIp": "239.255.255.250",
       "site": {
@@ -722,390 +750,40 @@
       }
     },
     {
-      "id": "a5645e11ea0b",
+      "id": "bc172ae9621c",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-09-06T21:02:13+00:00",
+      "sourceIp": "192.168.128.27",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "b9c72d3b87dd",
+      "title": "",
+      "content": "Resolved IPs: 142.250.75.174",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-09-06T21:01:49+00:00",
+      "sourceIp": "192.168.1.29",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "7c5038d430e5",
       "title": "",
       "content": "Connection Result: Attempt, Version: TLS 1.2",
       "type": "SSL Connection",
       "protocol": "Network",
-      "time": "2026-09-06T19:12:57+00:00",
-      "sourceIp": "192.168.1.29",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "a5645e11ea0b",
-      "title": "",
-      "content": "Resolved IPs: 72.153.5.130",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-09-06T19:12:57+00:00",
-      "sourceIp": "192.168.1.29",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "6956d0e8294b",
-      "title": "",
-      "content": "Resolved IPs: 93.123.17.252",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-09-06T19:10:43+00:00",
-      "sourceIp": "192.168.1.16",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "99e9636f3002",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T19:08:31+00:00",
-      "sourceIp": null,
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "7b2276302c78",
-      "title": "",
-      "content": "Port: 80, User-Agent: Microsoft-CryptoAPI/10.0",
-      "type": "HTTP Request",
-      "protocol": "Network",
-      "time": "2026-09-06T19:07:46+00:00",
-      "sourceIp": "192.168.1.43",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "2063043697f1",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T19:03:00+00:00",
-      "sourceIp": null,
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "17cd978fe50e",
-      "title": "",
-      "content": "Resolved IPs: 4.150.223.105",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-09-06T19:02:45+00:00",
-      "sourceIp": "192.168.32.241",
-      "destinationIp": null,
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "e56008cefc0d",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T19:02:00+00:00",
-      "sourceIp": "192.168.32.241",
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "d7f18918d9e7",
-      "title": "",
-      "content": "Resolved IPs: 44.236.186.200, 52.27.39.229, 44.240.160.10",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-09-06T19:00:07+00:00",
-      "sourceIp": "192.168.32.241",
-      "destinationIp": null,
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "67aa2afaae7a",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T18:57:30+00:00",
-      "sourceIp": "192.168.1.199",
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "c4f73815585c",
-      "title": "",
-      "content": "Resolved IPs: 199.203.60.121, 199.203.60.120",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-09-06T18:56:42+00:00",
-      "sourceIp": "192.168.1.17",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "34e9049ed2cb",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T18:52:59+00:00",
-      "sourceIp": "192.168.32.241",
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "5969e0d99297",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T18:51:59+00:00",
-      "sourceIp": "192.168.1.199",
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "bee1e459cdb6",
-      "title": "",
-      "content": "Resolved IPs: 4.208.165.241",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-09-06T18:47:01+00:00",
-      "sourceIp": "192.168.128.12",
-      "destinationIp": null,
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "fa25105474cd",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T18:46:29+00:00",
-      "sourceIp": null,
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "faa639c4a630",
-      "title": "",
-      "content": "Port: 80, User-Agent: Microsoft-Delivery-Optimization/10.0",
-      "type": "HTTP Request",
-      "protocol": "Network",
-      "time": "2026-09-06T18:45:55+00:00",
-      "sourceIp": "192.168.128.12",
-      "destinationIp": "194.116.104.37",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "93ea54792ab0",
-      "title": "",
-      "content": "Resolved IPs: 51.145.123.29",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-09-06T18:41:35+00:00",
-      "sourceIp": "192.168.1.16",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "820340ec538c",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T18:40:58+00:00",
-      "sourceIp": null,
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "e873f4d729c2",
-      "title": "",
-      "content": "Resolved IPs: 72.153.5.62",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-09-06T18:37:43+00:00",
-      "sourceIp": "192.168.1.17",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "59875a9284bd",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T18:35:28+00:00",
-      "sourceIp": null,
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "dda77d0c5a1b",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T18:29:57+00:00",
-      "sourceIp": null,
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "92f60e992ad7",
-      "title": "",
-      "content": "Resolved IPs: 51.132.193.104",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-09-06T18:26:44+00:00",
-      "sourceIp": "192.168.128.12",
-      "destinationIp": null,
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "d2b03cdde058",
-      "title": "",
-      "content": "Port: 80, User-Agent: Microsoft-CryptoAPI/10.0",
-      "type": "HTTP Request",
-      "protocol": "Network",
-      "time": "2026-09-06T18:25:08+00:00",
-      "sourceIp": "192.168.128.27",
-      "destinationIp": null,
-      "site": {
-        "location": "No location",
-        "name": "test"
-      }
-    },
-    {
-      "id": "d2b03cdde058",
-      "title": "",
-      "content": "Port: 80, User-Agent: Microsoft-CryptoAPI/10.0",
-      "type": "HTTP Request",
-      "protocol": "Network",
-      "time": "2026-09-06T18:25:08+00:00",
-      "sourceIp": "192.168.128.27",
-      "destinationIp": null,
-      "site": {
-        "location": "No location",
-        "name": "test"
-      }
-    },
-    {
-      "id": "636541e03e5f",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T18:24:26+00:00",
-      "sourceIp": null,
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "10e25a4d4dcf",
-      "title": "",
-      "content": "Connection Result: Established, Version: TLS 1.2, Selected Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, Selected Cipher Suite Security Level: Recommended",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-09-06T18:24:07+00:00",
-      "sourceIp": "192.168.128.27",
-      "destinationIp": null,
-      "site": {
-        "location": "No location",
-        "name": "test"
-      }
-    },
-    {
-      "id": "e33aa6f76a74",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T18:22:26+00:00",
-      "sourceIp": "192.168.128.8",
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "dd319415dbae",
-      "title": "",
-      "content": "Port: 80, User-Agent: Microsoft-CryptoAPI/10.0",
-      "type": "HTTP Request",
-      "protocol": "Network",
-      "time": "2026-09-06T18:20:02+00:00",
+      "time": "2026-09-06T21:00:41+00:00",
       "sourceIp": "192.168.128.21",
       "destinationIp": null,
       "site": {
@@ -1114,83 +792,13 @@
       }
     },
     {
-      "id": "826dca50f685",
+      "id": "633c4fef9afb",
       "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T18:18:56+00:00",
-      "sourceIp": null,
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "b9718e2b9145",
-      "title": "",
-      "content": "Connection Result: Attempt, Version: TLS 1.2",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-09-06T18:16:01+00:00",
-      "sourceIp": "192.168.128.27",
-      "destinationIp": null,
-      "site": {
-        "location": "No location",
-        "name": "test"
-      }
-    },
-    {
-      "id": "8a91f6e73c51",
-      "title": "",
-      "content": "Connection Result: Attempt, Version: TLS 1.2",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-09-06T18:15:03+00:00",
-      "sourceIp": "192.168.128.8",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "7dd7b473e0d8",
-      "title": "",
-      "content": "Connection Result: Attempt, Version: TLS 1.2",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-09-06T18:15:02+00:00",
-      "sourceIp": "192.168.128.8",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "24ae4b737690",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-09-06T18:13:25+00:00",
-      "sourceIp": null,
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tel aviv, Yitzhak Sade 8",
-        "name": "Tel Aviv"
-      }
-    },
-    {
-      "id": "be4264a9753b",
-      "title": "",
-      "content": "Resolved IPs: 20.190.147.8, 20.190.177.85, 20.190.147.10, 20.190.177.149, 20.190.147.2, 20.190.177.20, 20.190.177.83, 20.190.177.23",
+      "content": "Resolved IPs: 20.118.138.130",
       "type": "DNS Query",
       "protocol": "Network",
-      "time": "2026-09-06T18:12:33+00:00",
-      "sourceIp": "192.168.32.241",
+      "time": "2026-09-06T21:00:40+00:00",
+      "sourceIp": "192.168.128.21",
       "destinationIp": null,
       "site": {
         "location": "tel aviv, Yitzhak Sade 8",
@@ -1198,13 +806,13 @@
       }
     },
     {
-      "id": "92ea6ae442ce",
+      "id": "307e781a8e89",
       "title": "",
       "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
       "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-09-06T18:07:54+00:00",
-      "sourceIp": null,
+      "time": "2026-09-06T21:00:13+00:00",
+      "sourceIp": "192.168.128.49",
       "destinationIp": "239.255.255.250",
       "site": {
         "location": "tel aviv, Yitzhak Sade 8",
@@ -1212,12 +820,26 @@
       }
     },
     {
-      "id": "eafa22d812ad",
+      "id": "a3de6fff2ad4",
       "title": "",
-      "content": "Port: 80, User-Agent: Microsoft-CryptoAPI/10.0",
-      "type": "HTTP Request",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
+      "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-09-06T18:04:45+00:00",
+      "time": "2026-09-06T20:58:42+00:00",
+      "sourceIp": "192.168.1.199",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "2a171821aaca",
+      "title": "",
+      "content": "Connection Result: Attempt, Version: TLS 1.2",
+      "type": "SSL Connection",
+      "protocol": "Network",
+      "time": "2026-09-06T20:56:47+00:00",
       "sourceIp": "192.168.1.17",
       "destinationIp": null,
       "site": {
@@ -1226,12 +848,166 @@
       }
     },
     {
-      "id": "e0634fa777d3",
+      "id": "4588a008ac09",
       "title": "",
-      "content": "Resolved IPs: 143.204.226.60, 143.204.226.13, 143.204.226.16, 143.204.226.76",
+      "content": "Port: 80, User-Agent: Microsoft-CryptoAPI/10.0",
+      "type": "HTTP Request",
+      "protocol": "Network",
+      "time": "2026-09-06T20:55:25+00:00",
+      "sourceIp": "192.168.128.27",
+      "destinationIp": null,
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "2d93ae85ed3d",
+      "title": "",
+      "content": "Connection Result: Attempt, Version: TLS 1.2",
+      "type": "SSL Connection",
+      "protocol": "Network",
+      "time": "2026-09-06T20:53:36+00:00",
+      "sourceIp": "192.168.128.12",
+      "destinationIp": null,
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "c4918e2770b6",
+      "title": "",
+      "content": "Resolved IPs: 150.171.110.114",
       "type": "DNS Query",
       "protocol": "Network",
-      "time": "2026-09-06T18:02:25+00:00",
+      "time": "2026-09-06T20:53:27+00:00",
+      "sourceIp": "172.16.4.2",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "cc33ceea426b",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-09-06T20:53:12+00:00",
+      "sourceIp": "192.168.1.199",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "e9a9b40bf93f",
+      "title": "",
+      "content": "Resolved IPs: 72.153.5.133",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-09-06T20:50:07+00:00",
+      "sourceIp": "192.168.128.21",
+      "destinationIp": null,
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "b1f7b5d88b86",
+      "title": "",
+      "content": "Resolved IPs: 20.190.147.10, 20.190.147.6, 20.190.177.83, 20.190.147.12, 20.190.177.148, 20.190.177.149, 20.190.147.0, 20.190.177.146",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-09-06T20:48:16+00:00",
+      "sourceIp": "192.168.1.16",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "ff28599ea85a",
+      "title": "",
+      "content": "Resolved IPs: 20.42.179.204",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-09-06T20:48:14+00:00",
+      "sourceIp": "192.168.1.16",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "f4a51fd51e0f",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-09-06T20:47:42+00:00",
+      "sourceIp": null,
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "77a0f3ffab1e",
+      "title": "",
+      "content": "Resolved IPs: 142.250.75.163",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-09-06T20:45:32+00:00",
+      "sourceIp": "172.16.4.2",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "9ad251594a14",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-09-06T20:42:11+00:00",
+      "sourceIp": null,
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "2dd9ee649a08",
+      "title": "",
+      "content": "Resolved IPs: 20.67.186.184",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-09-06T20:41:03+00:00",
+      "sourceIp": "172.16.4.2",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "2cfb8984d2f3",
+      "title": "",
+      "content": "Resolved IPs: 48.211.4.16",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-09-06T20:39:02+00:00",
       "sourceIp": "192.168.32.241",
       "destinationIp": null,
       "site": {
@@ -1240,14 +1016,238 @@
       }
     },
     {
-      "id": "8f0e3eca8f07",
+      "id": "071bba1c5e77",
       "title": "",
       "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
       "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-09-06T18:02:24+00:00",
+      "time": "2026-09-06T20:36:41+00:00",
       "sourceIp": null,
       "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "d954c15206b8",
+      "title": "",
+      "content": "Resolved IPs: 72.153.5.63",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-09-06T20:32:43+00:00",
+      "sourceIp": "172.16.4.2",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "35eb230a6347",
+      "title": "",
+      "content": "Port: 80, User-Agent: Microsoft-CryptoAPI/10.0",
+      "type": "HTTP Request",
+      "protocol": "Network",
+      "time": "2026-09-06T20:32:42+00:00",
+      "sourceIp": "192.168.128.8",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "402a32ac90e1",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-09-06T20:31:10+00:00",
+      "sourceIp": null,
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "a4e6f37afde6",
+      "title": "",
+      "content": "Invalid service code: 50. Protocol: CIP",
+      "type": "PLC Error",
+      "protocol": null,
+      "time": "2026-09-06T20:30:44+00:00",
+      "sourceIp": "192.168.1.43",
+      "destinationIp": "192.168.32.9",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "a4e6f37afde6",
+      "title": "",
+      "content": "Protocol: CIP",
+      "type": "PLC Error",
+      "protocol": null,
+      "time": "2026-09-06T20:30:44+00:00",
+      "sourceIp": "192.168.1.43",
+      "destinationIp": "192.168.32.9",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "196b61903c2d",
+      "title": "",
+      "content": "Protocol: CIP",
+      "type": "PLC Error",
+      "protocol": null,
+      "time": "2026-09-06T20:28:14+00:00",
+      "sourceIp": "192.168.1.43",
+      "destinationIp": "192.168.32.9",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "196b61903c2d",
+      "title": "",
+      "content": "Invalid service code: 50. Protocol: CIP",
+      "type": "PLC Error",
+      "protocol": null,
+      "time": "2026-09-06T20:28:14+00:00",
+      "sourceIp": "192.168.1.43",
+      "destinationIp": "192.168.32.9",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "ec22108e5c19",
+      "title": "",
+      "content": "Protocol: CIP",
+      "type": "PLC Error",
+      "protocol": null,
+      "time": "2026-09-06T20:25:43+00:00",
+      "sourceIp": "192.168.1.43",
+      "destinationIp": "192.168.32.9",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "ec22108e5c19",
+      "title": "",
+      "content": "Invalid service code: 50. Protocol: CIP",
+      "type": "PLC Error",
+      "protocol": null,
+      "time": "2026-09-06T20:25:43+00:00",
+      "sourceIp": "192.168.1.43",
+      "destinationIp": "192.168.32.7",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "ec22108e5c19",
+      "title": "",
+      "content": "Protocol: CIP",
+      "type": "PLC Error",
+      "protocol": null,
+      "time": "2026-09-06T20:25:43+00:00",
+      "sourceIp": "192.168.1.43",
+      "destinationIp": "192.168.32.7",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "ec22108e5c19",
+      "title": "",
+      "content": "Invalid service code: 50. Protocol: CIP",
+      "type": "PLC Error",
+      "protocol": null,
+      "time": "2026-09-06T20:25:43+00:00",
+      "sourceIp": "192.168.1.43",
+      "destinationIp": "192.168.32.9",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "a0c9c82b3a94",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Aug 19, 2026 12:02 PM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-09-06T20:25:39+00:00",
+      "sourceIp": null,
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "d692eceb08ab",
+      "title": "",
+      "content": "Resolved IPs: 131.253.33.203",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-09-06T20:24:35+00:00",
+      "sourceIp": "172.16.4.2",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "c55156bf5be1",
+      "title": "",
+      "content": "Invalid service code: 50. Protocol: CIP",
+      "type": "PLC Error",
+      "protocol": null,
+      "time": "2026-09-06T20:23:13+00:00",
+      "sourceIp": "192.168.1.43",
+      "destinationIp": "192.168.32.7",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "c55156bf5be1",
+      "title": "",
+      "content": "Protocol: CIP",
+      "type": "PLC Error",
+      "protocol": null,
+      "time": "2026-09-06T20:23:13+00:00",
+      "sourceIp": "192.168.1.43",
+      "destinationIp": "192.168.32.9",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "c55156bf5be1",
+      "title": "",
+      "content": "Invalid service code: 50. Protocol: CIP",
+      "type": "PLC Error",
+      "protocol": null,
+      "time": "2026-09-06T20:23:13+00:00",
+      "sourceIp": "192.168.1.43",
+      "destinationIp": "192.168.32.9",
       "site": {
         "location": "tel aviv, Yitzhak Sade 8",
         "name": "Tel Aviv"
