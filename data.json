@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T16:51:39.253870Z",
+  "updatedAt": "2026-10-08T21:35:17.342134Z",
   "alerts": [
     {
       "id": "0837fe19320d",
@@ -125,12 +125,96 @@
   ],
   "activities": [
     {
-      "id": "ce0139274939",
+      "id": "de08fe95e0a2",
       "title": "",
-      "content": "Port: 80, User-Agent: Microsoft-CryptoAPI/10.0",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T21:28:16+00:00",
+      "sourceIp": "192.168.1.17",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "125ca538ca2f",
+      "title": "",
+      "content": "Port: 80, User-Agent: GoogleUpdater 156.0.8067.0",
       "type": "HTTP Request",
       "protocol": "Network",
-      "time": "2026-10-08T16:42:09+00:00",
+      "time": "2026-10-08T21:26:32+00:00",
+      "sourceIp": "192.168.128.27",
+      "destinationIp": null,
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "20760a5c730f",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T21:21:16+00:00",
+      "sourceIp": "192.168.1.17",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "cc10acd434c1",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T21:14:45+00:00",
+      "sourceIp": "192.168.1.17",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "5e5c92bd9290",
+      "title": "",
+      "content": "Connection Result: Established, Version: TLS 1.3, Selected Cipher Suite: TLS_AES_256_GCM_SHA384, Selected Cipher Suite Security Level: Recommended",
+      "type": "SSL Connection",
+      "protocol": "Network",
+      "time": "2026-10-08T21:14:05+00:00",
+      "sourceIp": "10.201.0.2",
+      "destinationIp": "18.233.189.178",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "bb6d274e7c18",
+      "title": "",
+      "content": "Resolved IPs: 40.126.53.9, 20.231.128.65, 40.126.53.15, 20.190.181.6, 20.190.181.3, 40.126.53.7, 40.126.53.8, 40.126.53.12",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-10-08T21:12:43+00:00",
+      "sourceIp": "172.16.4.2",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "f06c1aeffb11",
+      "title": "",
+      "content": "Resolved IPs: 172.217.117.4, 172.217.116.4, 172.217.119.4, 172.217.113.4, 172.217.112.4, 172.217.114.4, 172.217.115.4, 172.217.118.4",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-10-08T21:07:51+00:00",
       "sourceIp": "192.168.1.29",
       "destinationIp": null,
       "site": {
@@ -139,12 +223,12 @@
       }
     },
     {
-      "id": "9c27df1e91f9",
+      "id": "465d814e8582",
       "title": "",
       "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
       "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-10-08T16:41:44+00:00",
+      "time": "2026-10-08T21:07:44+00:00",
       "sourceIp": "192.168.1.17",
       "destinationIp": "239.255.255.250",
       "site": {
@@ -153,27 +237,97 @@
       }
     },
     {
-      "id": "ee16ecbdbce3",
+      "id": "47695907a0b8",
       "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
-      "type": "Suspicious Host",
+      "content": "Resolved IPs: 172.170.180.133",
+      "type": "DNS Query",
       "protocol": "Network",
-      "time": "2026-10-08T16:34:13+00:00",
-      "sourceIp": "192.168.1.17",
-      "destinationIp": "239.255.255.250",
+      "time": "2026-10-08T21:07:43+00:00",
+      "sourceIp": "172.16.4.2",
+      "destinationIp": null,
       "site": {
-        "location": "No location",
-        "name": "test"
+        "location": "tlv",
+        "name": "Madrid"
       }
     },
     {
-      "id": "ae01aeedc93c",
+      "id": "78ca37254f23",
+      "title": "",
+      "content": "Resolved IPs: 34.104.35.123",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-10-08T21:06:57+00:00",
+      "sourceIp": "192.168.1.29",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "78ca37254f23",
+      "title": "",
+      "content": "Port: 80, User-Agent: GoogleUpdater 156.0.8067.0",
+      "type": "HTTP Request",
+      "protocol": "Network",
+      "time": "2026-10-08T21:06:57+00:00",
+      "sourceIp": "192.168.1.29",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "78ca37254f23",
+      "title": "",
+      "content": "Resolved IPs: 142.250.75.142",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-10-08T21:06:57+00:00",
+      "sourceIp": "192.168.1.29",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "30ffa1c1d114",
       "title": "",
       "content": "",
       "type": "DNS Query",
       "protocol": "Network",
-      "time": "2026-10-08T16:34:02+00:00",
-      "sourceIp": "192.168.1.3",
+      "time": "2026-10-08T21:02:43+00:00",
+      "sourceIp": "172.16.4.2",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "d4517f7f7d25",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T21:01:13+00:00",
+      "sourceIp": "192.168.1.17",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "720f293a84ea",
+      "title": "",
+      "content": "Resolved IPs: 135.232.92.97",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-10-08T20:58:05+00:00",
+      "sourceIp": "192.168.128.12",
       "destinationIp": null,
       "site": {
         "location": "tel aviv, Yitzhak Sade 8",
@@ -181,376 +335,26 @@
       }
     },
     {
-      "id": "b8938ec8c90f",
-      "title": "",
-      "content": "Connection Result: Attempt, Version: TLS 1.2",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-10-08T16:31:06+00:00",
-      "sourceIp": "192.168.128.27",
-      "destinationIp": "72.153.5.60",
-      "site": {
-        "location": "No location",
-        "name": "test"
-      }
-    },
-    {
-      "id": "fce38b41b475",
-      "title": "",
-      "content": "Port: 80, User-Agent: Microsoft-Delivery-Optimization/10.0",
-      "type": "HTTP Request",
-      "protocol": "Network",
-      "time": "2026-10-08T16:29:07+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "d6f4e9573ee7",
-      "title": "",
-      "content": "Resolved IPs: 72.153.5.130",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-10-08T16:28:40+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "d6f4e9573ee7",
-      "title": "",
-      "content": "Connection Result: Attempt, Version: TLS 1.2",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-10-08T16:28:40+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": "72.153.5.130",
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "9ac7a6a7cc64",
-      "title": "",
-      "content": "Resolved IPs: 72.153.5.140",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-10-08T16:28:00+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "9ac7a6a7cc64",
-      "title": "",
-      "content": "Connection Result: Attempt, Version: TLS 1.2",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-10-08T16:28:00+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": "72.153.5.140",
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "176dc4df7631",
-      "title": "",
-      "content": "Resolved IPs: 72.153.5.60",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:44+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "176dc4df7631",
-      "title": "",
-      "content": "Connection Result: Attempt, Version: TLS 1.2",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:44+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": "72.153.5.60",
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "ef434e244c7d",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:42+00:00",
-      "sourceIp": "192.168.1.17",
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "No location",
-        "name": "test"
-      }
-    },
-    {
-      "id": "b76161262d48",
-      "title": "",
-      "content": "Resolved IPs: 2.19.13.205",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:42+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "3a7368165c6c",
-      "title": "",
-      "content": "Resolved IPs: 93.123.17.252",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:33+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "e6e0bbf5cf57",
-      "title": "",
-      "content": "Resolved IPs: 2.19.13.205",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:11+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "e6e0bbf5cf57",
-      "title": "",
-      "content": "Resolved IPs: 2.19.13.205",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:11+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "e6e0bbf5cf57",
+      "id": "98857e11ab43",
       "title": "",
       "content": "Resolved IPs: 199.232.210.172, 199.232.214.172",
       "type": "DNS Query",
       "protocol": "Network",
-      "time": "2026-10-08T16:27:11+00:00",
-      "sourceIp": "10.201.0.176",
+      "time": "2026-10-08T20:57:59+00:00",
+      "sourceIp": "192.168.128.12",
       "destinationIp": null,
       "site": {
-        "location": "tlv",
-        "name": "Madrid"
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
       }
     },
     {
-      "id": "e6e0bbf5cf57",
-      "title": "",
-      "content": "Resolved IPs: 199.203.60.130, 199.203.60.122",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:11+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "e6e0bbf5cf57",
-      "title": "",
-      "content": "Port: 80, User-Agent: Microsoft-Delivery-Optimization/10.0",
-      "type": "HTTP Request",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:11+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": "194.116.104.36",
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "e0e657389557",
-      "title": "",
-      "content": "Connection Result: Attempt, Version: TLS 1.2",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:10+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": "72.154.7.17",
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "e0e657389557",
-      "title": "",
-      "content": "Resolved IPs: 2.19.13.205",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:10+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "e0e657389557",
-      "title": "",
-      "content": "Connection Result: Established, Version: TLS 1.2, Selected Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, Selected Cipher Suite Security Level: Secure",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:10+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": "2.19.13.205",
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "23e35e2f863b",
-      "title": "",
-      "content": "Resolved IPs: 72.154.7.17",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:09+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "23e35e2f863b",
-      "title": "",
-      "content": "Resolved IPs: 48.209.192.157",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:09+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "23e35e2f863b",
-      "title": "",
-      "content": "Connection Result: Attempt, Version: TLS 1.2",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-10-08T16:27:09+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": "72.152.5.201",
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "7a866a7b3790",
-      "title": "",
-      "content": "Resolved IPs: 48.192.143.121",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-10-08T16:26:24+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "7a866a7b3790",
-      "title": "",
-      "content": "Connection Result: Attempt, Version: TLS 1.2",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-10-08T16:26:24+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": "48.192.143.121",
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "eedf7f4925e8",
-      "title": "",
-      "content": "Resolved IPs: 135.232.92.137",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-10-08T16:26:20+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "eedf7f4925e8",
-      "title": "",
-      "content": "Connection Result: Attempt, Version: TLS 1.2",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-10-08T16:26:20+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": "135.232.92.137",
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "58a25ba20c43",
+      "id": "d2920ee55d4c",
       "title": "",
       "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
       "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-10-08T16:20:11+00:00",
+      "time": "2026-10-08T20:54:12+00:00",
       "sourceIp": "192.168.1.17",
       "destinationIp": "239.255.255.250",
       "site": {
@@ -559,12 +363,12 @@
       }
     },
     {
-      "id": "0c1107aa20b7",
+      "id": "3f16b01d25ef",
       "title": "",
       "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
       "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-10-08T16:13:11+00:00",
+      "time": "2026-10-08T20:47:11+00:00",
       "sourceIp": "192.168.1.17",
       "destinationIp": "239.255.255.250",
       "site": {
@@ -573,40 +377,40 @@
       }
     },
     {
-      "id": "30b6cd5932de",
+      "id": "7c77caa7756a",
       "title": "",
-      "content": "Connection Result: Attempt, Version: TLS 1.2",
-      "type": "SSL Connection",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
+      "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-10-08T16:09:10+00:00",
-      "sourceIp": "192.168.128.8",
-      "destinationIp": "52.123.255.161",
+      "time": "2026-10-08T20:39:40+00:00",
+      "sourceIp": "192.168.1.17",
+      "destinationIp": "239.255.255.250",
       "site": {
-        "location": "tlv",
-        "name": "Madrid"
+        "location": "No location",
+        "name": "test"
       }
     },
     {
-      "id": "b2cf939cb749",
+      "id": "06e313ed3b2e",
       "title": "",
       "content": "Connection Result: Established, Version: TLS 1.2, Selected Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, Selected Cipher Suite Security Level: Recommended",
       "type": "SSL Connection",
       "protocol": "Network",
-      "time": "2026-10-08T16:06:57+00:00",
-      "sourceIp": "192.168.1.29",
-      "destinationIp": "142.250.75.46",
+      "time": "2026-10-08T20:39:26+00:00",
+      "sourceIp": "10.204.0.111",
+      "destinationIp": "142.250.75.142",
       "site": {
         "location": "tlv",
         "name": "Madrid"
       }
     },
     {
-      "id": "65b88c892350",
+      "id": "3fe37cab84e8",
       "title": "",
       "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
       "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-10-08T16:06:10+00:00",
+      "time": "2026-10-08T20:32:39+00:00",
       "sourceIp": "192.168.1.17",
       "destinationIp": "239.255.255.250",
       "site": {
@@ -615,124 +419,12 @@
       }
     },
     {
-      "id": "5d4d9813e20f",
+      "id": "9d2667fa7ab7",
       "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-10-08T15:59:39+00:00",
-      "sourceIp": "192.168.1.17",
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "No location",
-        "name": "test"
-      }
-    },
-    {
-      "id": "ae5d8c3011c9",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-10-08T15:52:38+00:00",
-      "sourceIp": "192.168.1.17",
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "No location",
-        "name": "test"
-      }
-    },
-    {
-      "id": "37b4ca7481d8",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-10-08T15:45:38+00:00",
-      "sourceIp": "192.168.1.17",
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "No location",
-        "name": "test"
-      }
-    },
-    {
-      "id": "537b1a4cb5f3",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-10-08T15:39:07+00:00",
-      "sourceIp": "192.168.1.17",
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "No location",
-        "name": "test"
-      }
-    },
-    {
-      "id": "b8da9d96ee9d",
-      "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
-      "type": "Suspicious Host",
-      "protocol": "Network",
-      "time": "2026-10-08T15:38:37+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": "239.255.255.250",
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "37512846abd4",
-      "title": "",
-      "content": "Connection Result: Attempt, Version: TLS 1.2",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-10-08T15:33:11+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": "72.153.5.63",
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "37512846abd4",
-      "title": "",
-      "content": "Resolved IPs: 72.153.5.63",
+      "content": "",
       "type": "DNS Query",
       "protocol": "Network",
-      "time": "2026-10-08T15:33:11+00:00",
-      "sourceIp": "10.201.0.176",
-      "destinationIp": null,
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "30493f193ba1",
-      "title": "",
-      "content": "Connection Result: Attempt, Version: TLS 1.2",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-10-08T15:33:00+00:00",
-      "sourceIp": "192.168.1.29",
-      "destinationIp": "72.153.5.63",
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "a95e8ff6edbb",
-      "title": "",
-      "content": "Resolved IPs: 72.153.5.63",
-      "type": "DNS Query",
-      "protocol": "Network",
-      "time": "2026-10-08T15:32:59+00:00",
+      "time": "2026-10-08T20:32:36+00:00",
       "sourceIp": "192.168.1.29",
       "destinationIp": null,
       "site": {
@@ -741,12 +433,26 @@
       }
     },
     {
-      "id": "27d4a882a190",
+      "id": "b761fb137c67",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Category: information technology | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 08, 2026 10:44 AM | Port: 53",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T20:25:39+00:00",
+      "sourceIp": "10.201.0.2",
+      "destinationIp": "8.8.8.8",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "e7cce55c4a39",
       "title": "",
       "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
       "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-10-08T15:32:36+00:00",
+      "time": "2026-10-08T20:25:09+00:00",
       "sourceIp": "192.168.1.17",
       "destinationIp": "239.255.255.250",
       "site": {
@@ -755,12 +461,96 @@
       }
     },
     {
-      "id": "493c85bbc209",
+      "id": "826245f7e1a7",
+      "title": "",
+      "content": "Resolved IPs: 93.123.17.252",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-10-08T20:22:10+00:00",
+      "sourceIp": "172.16.4.2",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "5b8d49d95f12",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Category: information technology | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 08, 2026 10:44 AM | Port: 53",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T20:20:08+00:00",
+      "sourceIp": "10.201.0.2",
+      "destinationIp": "8.8.8.8",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "29a7c426c2de",
       "title": "",
       "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
       "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-10-08T15:32:06+00:00",
+      "time": "2026-10-08T20:17:38+00:00",
+      "sourceIp": "192.168.1.17",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "0b5a11c3fe5c",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T20:10:37+00:00",
+      "sourceIp": "192.168.1.17",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "95780e88ad6d",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T20:08:37+00:00",
+      "sourceIp": "10.201.0.176",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "c0055aa4f1c7",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T20:03:06+00:00",
+      "sourceIp": "192.168.1.17",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "a0d9ff62adf8",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T20:02:06+00:00",
       "sourceIp": "192.168.128.8",
       "destinationIp": "239.255.255.250",
       "site": {
@@ -769,26 +559,12 @@
       }
     },
     {
-      "id": "dc8a1db34aa4",
-      "title": "",
-      "content": "Connection Result: Established, Version: TLS 1.3, Selected Cipher Suite: TLS_AES_256_GCM_SHA384, Selected Cipher Suite Security Level: Recommended",
-      "type": "SSL Connection",
-      "protocol": "Network",
-      "time": "2026-10-08T15:31:26+00:00",
-      "sourceIp": "172.21.0.3",
-      "destinationIp": "10.203.0.168",
-      "site": {
-        "location": "tlv",
-        "name": "Madrid"
-      }
-    },
-    {
-      "id": "610210df3113",
+      "id": "d82d79adf0e7",
       "title": "",
       "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
       "type": "Suspicious Host",
       "protocol": "Network",
-      "time": "2026-10-08T15:26:05+00:00",
+      "time": "2026-10-08T19:56:06+00:00",
       "sourceIp": "192.168.1.17",
       "destinationIp": "239.255.255.250",
       "site": {
@@ -797,31 +573,255 @@
       }
     },
     {
-      "id": "65713e5c43af",
+      "id": "f700eac1d8a4",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T19:49:35+00:00",
+      "sourceIp": "192.168.1.17",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "f10260525fd8",
+      "title": "",
+      "content": "Resolved IPs: 72.153.5.129",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-10-08T19:45:01+00:00",
+      "sourceIp": "172.16.4.2",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "b85bc1f4dd30",
+      "title": "",
+      "content": "Resolved IPs: 50.17.250.19",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-10-08T19:44:33+00:00",
+      "sourceIp": "172.16.4.2",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "0b47c511b242",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T19:43:04+00:00",
+      "sourceIp": "192.168.1.17",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "79248fb2ea87",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T19:36:04+00:00",
+      "sourceIp": "192.168.1.17",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "52035580f823",
+      "title": "",
+      "content": "Resolved IPs: 52.123.128.14, 52.123.129.14",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-10-08T19:34:47+00:00",
+      "sourceIp": "172.16.4.2",
+      "destinationIp": null,
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "a20ae139b5b5",
+      "title": "",
+      "content": "Connection Result: Established, Version: TLS 1.3, Selected Cipher Suite: TLS_AES_128_GCM_SHA256, Selected Cipher Suite Security Level: Recommended",
+      "type": "SSL Connection",
+      "protocol": "Network",
+      "time": "2026-10-08T19:31:52+00:00",
+      "sourceIp": "192.168.128.8",
+      "destinationIp": "13.248.161.247",
+      "site": {
+        "location": "tlv",
+        "name": "Madrid"
+      }
+    },
+    {
+      "id": "208b2f85f2a9",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T19:28:33+00:00",
+      "sourceIp": "192.168.1.17",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "6324bf8813ea",
+      "title": "",
+      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
+      "type": "Suspicious Host",
+      "protocol": "Network",
+      "time": "2026-10-08T19:22:02+00:00",
+      "sourceIp": "192.168.1.17",
+      "destinationIp": "239.255.255.250",
+      "site": {
+        "location": "No location",
+        "name": "test"
+      }
+    },
+    {
+      "id": "6af719e315ba",
       "title": "",
       "content": "Connection Result: Attempt, Version: TLS 1.2",
       "type": "SSL Connection",
       "protocol": "Network",
-      "time": "2026-10-08T15:20:12+00:00",
-      "sourceIp": "10.204.0.111",
-      "destinationIp": "4.213.133.45",
+      "time": "2026-10-08T19:19:51+00:00",
+      "sourceIp": "192.168.32.241",
+      "destinationIp": "72.153.5.131",
       "site": {
-        "location": "tlv",
-        "name": "Madrid"
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
       }
     },
     {
-      "id": "38541765315d",
+      "id": "863e8585f4eb",
       "title": "",
-      "content": "Confidence: High | Sources: Armis Threat Intelligence; Manual: 'External Source' | Valid From: 2025-07-06 08:17 | Valid Until: 9999-12-31 00:00 | Last Reported: Oct 07, 2026 09:49 AM | Port: 1900",
-      "type": "Suspicious Host",
+      "content": "Resolved IPs: 72.153.5.131",
+      "type": "DNS Query",
       "protocol": "Network",
-      "time": "2026-10-08T15:19:05+00:00",
-      "sourceIp": "192.168.1.17",
-      "destinationIp": "239.255.255.250",
+      "time": "2026-10-08T19:19:50+00:00",
+      "sourceIp": "192.168.32.241",
+      "destinationIp": null,
       "site": {
-        "location": "No location",
-        "name": "test"
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "211103d9f077",
+      "title": "",
+      "content": "Resolved IPs: 199.232.214.172, 199.232.210.172",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-10-08T19:19:47+00:00",
+      "sourceIp": "192.168.32.241",
+      "destinationIp": null,
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "a40323c4de4f",
+      "title": "",
+      "content": "Resolved IPs: 199.203.60.122, 199.203.60.130",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-10-08T19:19:40+00:00",
+      "sourceIp": "192.168.32.241",
+      "destinationIp": null,
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "d822488d4e22",
+      "title": "",
+      "content": "Connection Result: Attempt, Version: TLS 1.2",
+      "type": "SSL Connection",
+      "protocol": "Network",
+      "time": "2026-10-08T19:19:38+00:00",
+      "sourceIp": "192.168.32.241",
+      "destinationIp": "72.153.5.139",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "d822488d4e22",
+      "title": "",
+      "content": "Resolved IPs: 72.153.5.139",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-10-08T19:19:38+00:00",
+      "sourceIp": "192.168.32.241",
+      "destinationIp": null,
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "15ae05d71f99",
+      "title": "",
+      "content": "Resolved IPs: 72.153.5.63",
+      "type": "DNS Query",
+      "protocol": "Network",
+      "time": "2026-10-08T19:19:28+00:00",
+      "sourceIp": "192.168.32.241",
+      "destinationIp": null,
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "15ae05d71f99",
+      "title": "",
+      "content": "Connection Result: Attempt, Version: TLS 1.2",
+      "type": "SSL Connection",
+      "protocol": "Network",
+      "time": "2026-10-08T19:19:28+00:00",
+      "sourceIp": "192.168.32.241",
+      "destinationIp": "72.153.5.63",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
+      }
+    },
+    {
+      "id": "15ae05d71f99",
+      "title": "",
+      "content": "Connection Result: Established, Version: TLS 1.2, Selected Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, Selected Cipher Suite Security Level: Secure",
+      "type": "SSL Connection",
+      "protocol": "Network",
+      "time": "2026-10-08T19:19:28+00:00",
+      "sourceIp": "192.168.32.241",
+      "destinationIp": "2.19.13.205",
+      "site": {
+        "location": "tel aviv, Yitzhak Sade 8",
+        "name": "Tel Aviv"
       }
     }
   ],
